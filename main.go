@@ -21,4 +21,8 @@ func main() {
 	var wallet handler.Wallet
 	prikey, publikey, address := wallet.GetWallet()
 	fmt.Println("prikey:" + prikey + " publickey:" + publikey + " address:" + address)
+
+	block := handler.GetHeaderByNumber(client)
+	handler.GetTransferInfo(client, block)
+
 }
