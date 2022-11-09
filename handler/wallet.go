@@ -20,7 +20,7 @@ func (w *Wallet) GetWallet() (priKey, pubKey, address string) {
 
 	privateKeyBytes := crypto.FromECDSA(privateKey)
 	priKey = hexutil.Encode(privateKeyBytes)[2:]
-	fmt.Println(priKey) // 0xfad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19
+	fmt.Println(priKey) //
 
 	publicKey := privateKey.Public()
 	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
